@@ -29,11 +29,13 @@ export const createReview = (reviewData, user) => {
   console.log(user)
   console.log(reviewData)
   return axios({
-    url: apiUrl + '/reviews/',
+    url: apiUrl + '/reviews',
     method: 'post',
     headers: {
       'Authorization': `Token token=${user.token}`
     },
-    data: reviewData
+    data: {
+      review: reviewData
+    }
   })
 }
