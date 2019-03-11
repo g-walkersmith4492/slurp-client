@@ -1,6 +1,6 @@
 {
   "name": "Slurp",
-  "homepage": "https://<USERNAME>.github.io/<REPO NAME>",
+  "homepage": "https://github.com/g-walkersmith4492/slurp-client ",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
