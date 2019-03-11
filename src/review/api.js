@@ -39,3 +39,15 @@ export const createReview = (reviewData, user) => {
     }
   })
 }
+
+export const editReview = (reviewData, user, id) => {
+  console.log(reviewData)
+  return axios({
+    url: apiUrl + '/reviews/' + id,
+    method: 'patch',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+    data: reviewData
+  })
+}

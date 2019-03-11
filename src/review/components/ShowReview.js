@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router'
 import messages from '../messages'
 import { showReview, deleteReview } from '../api.js'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
 class ShowReview extends Component {
@@ -56,6 +57,9 @@ class ShowReview extends Component {
         <p>Location: {review.location}</p>
         <p>Price: {review.price}</p>
         <p>ABV: {review.comments}</p>
+        <Link to={`/review${review.id}/edit`}>
+          <button>Edit Your Review</button>
+        </Link>
         <button className="btn" onClick={() => this.deleteRev(review.id)}>X</button>
       </article>
     )

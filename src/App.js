@@ -11,6 +11,7 @@ import ChangePassword from './auth/components/ChangePassword'
 import ShowReviews from './review/components/ShowReviews'
 import ShowReview from './review/components/ShowReview'
 import CreateReview from './review/components/CreateReview'
+import EditReview from './review/components/EditReview'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -66,6 +67,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/create-review' render={({ match }) => (
             <CreateReview alert={this.alert} user={user} match={match}/>
+          )} />
+          <AuthenticatedRoute user={user} path='/review:id/edit' render={({ match }) => (
+            <EditReview alert={this.alert} user={user} match={match}/>
           )} />
         </main>
       </React.Fragment>
