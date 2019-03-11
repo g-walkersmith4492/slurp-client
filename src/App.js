@@ -9,6 +9,8 @@ import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import ShowReviews from './review/components/ShowReviews'
+import ShowReview from './review/components/ShowReview'
+import CreateReview from './review/components/CreateReview'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -58,6 +60,12 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/show-reviews' render={() => (
             <ShowReviews alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/reviews/:id' render={({ match }) => (
+            <ShowReview alert={this.alert} user={user} match={match}/>
+          )} />
+          <AuthenticatedRoute user={user} path='/create-review' render={({ match }) => (
+            <CreateReview alert={this.alert} user={user} match={match}/>
           )} />
         </main>
       </React.Fragment>

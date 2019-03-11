@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { showReviews } from '../api.js'
 import messages from '../messages'
+import { Link } from 'react-router-dom'
 
 class ShowReviews extends Component {
   constructor () {
@@ -34,7 +35,7 @@ class ShowReviews extends Component {
         <ul>
           {this.state.reviews.map(review => (
             <p key={review.id}>
-              {review.ramen_type} {review.price} {review.rating} {review.location} {review.comments}
+              <Link to={`/reviews/${review.id}`}>{review.name}</Link>
             </p>
           ))}
         </ul>
