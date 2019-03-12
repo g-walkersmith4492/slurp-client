@@ -40,7 +40,7 @@ class EditReview extends Component {
     const { shouldRedirect } = this.state
     if (shouldRedirect) {
       return <Redirect to={{
-        pathname: '/view-reviews'
+        pathname: '/show-reviews'
       }} />
     }
     return (

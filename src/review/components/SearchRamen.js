@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { searchRamen } from '../api'
 import messages from '../messages'
+import Card from 'react-bootstrap/Card'
 
 class SearchRamen extends Component {
   constructor () {
@@ -23,7 +24,7 @@ class SearchRamen extends Component {
 
     searchRamen(this.state.search, user)
       .then(response => this.setState({ ramens: response.data.businesses }))
-      .then(response => console.log(this.state.wines))
+      .then(response => console.log(this.state.ramens))
       .then(() => alert(messages.signInSuccess, 'success'))
       .catch(error => {
         console.error(error)
@@ -35,8 +36,7 @@ class SearchRamen extends Component {
   render () {
     if (!this.state.ramens) {
       return (<form className='search-ramen-form' onSubmit={this.onSearchRamen}>
-        <h3>Search Ramen Stores</h3>
-        <label>Location</label>
+        <h3>Find New Ramen Spots!</h3>
         <input
           required
           type="text"
@@ -45,15 +45,13 @@ class SearchRamen extends Component {
           placeholder="location"
           onChange={this.handleChange}
         />
-        <button className="btn" type="submit">Search!</button>
+        <button className="btn nav-button" type="submit">Search!</button>
       </form>
       )
     }
 
     return (
       <form className='search-ramen-form' onSubmit={this.onSearchRamen}>
-        <h3>Search Ramen Stores</h3>
-        <label>Location</label>
         <input
           required
           type="text"
@@ -62,16 +60,20 @@ class SearchRamen extends Component {
           placeholder="location"
           onChange={this.handleChange}
         />
-        <button className="btn" type="submit">Search!</button>
-
-        <h3>Ramen Spots:</h3>
-        <ul>
-          {this.state.ramens.map(ramen => (
-            <p key={ramen.alias}>
-              {ramen.name} located at {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}
-            </p>
-          ))}
-        </ul>
+        <button className="btn nav-button" type="submit">Search!</button>
+        <h3>Find New Ramen Spots!</h3>
+        <h4 className="yelp-header">Restaurants:</h4>
+        {this.state.ramens.map(ramen => (
+          <Card key={ ramen.alias }>
+            <Card.Img className="yelp-image"variant="top" src={ramen.image_url} />
+            <Card.Body>
+              <Card.Title>{ramen.name}</Card.Title>
+              <Card.Text>
+                {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
       </form>
     )
   }
