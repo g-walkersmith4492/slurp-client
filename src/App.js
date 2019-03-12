@@ -12,6 +12,7 @@ import ShowReviews from './review/components/ShowReviews'
 import ShowReview from './review/components/ShowReview'
 import CreateReview from './review/components/CreateReview'
 import EditReview from './review/components/EditReview'
+import SearchRamen from './review/components/SearchRamen'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -70,6 +71,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/review:id/edit' render={({ match }) => (
             <EditReview alert={this.alert} user={user} match={match}/>
+          )} />
+          <AuthenticatedRoute user={user} path='/search-ramen' render={({ match }) => (
+            <SearchRamen alert={this.alert} user={user} match={match}/>
           )} />
         </main>
       </React.Fragment>

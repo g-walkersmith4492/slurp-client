@@ -51,3 +51,14 @@ export const editReview = (reviewData, user, id) => {
     data: reviewData
   })
 }
+
+export const searchRamen = (search, user) => {
+  return axios({
+    url: apiUrl + '/yelp-search',
+    method: 'post',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+    data: { search }
+  })
+}
