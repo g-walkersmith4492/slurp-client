@@ -76,12 +76,16 @@ $charcoal: #ccc;
   color: #ff5100;
 }
 
-.yelp-header {
-  text-align: center
+.yelp-header-main {
+  color: #BA2F00;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .search-header {
-  text-align: center
+  color: #BA2F00;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 
@@ -95,12 +99,6 @@ $charcoal: #ccc;
   text-align: center;
   padding: 15px;
   margin: 25px;
-}
-
-body {
-  background-image: url('https://i.imgur.com/AEQYYnJ.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .create-review-form {
@@ -132,4 +130,74 @@ body {
 .auth-button:hover {
   background-color: white;
   color: red;
+}
+
+.review-link {
+  font-size: 24px;
+  color: red;
+  border: 1px solid black;
+  padding: 39px;
+  margin: 30px;
+}
+
+.review-title {
+  font-size: 36px;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin: 30px;
+  text-decoration: underline;
+}
+
+
+.list-image {
+  height: 100px;
+}
+
+#video-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+video {
+  background: url('./SlurpMainPicture.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-background {
+  position: relative;
+  height: calc(100vh - 100px);
+}
+
+.create-review-form {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.edit-review-form {
+  text-align: center;
+}
+
+
+.yelp-header-main {
+  color: RGB(254, 227, 121);
+  text-shadow: 1px 1px black;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  height: 50px;
+  width: 500px;
+  font-size: 24px;
+  padding: 10px;
 }

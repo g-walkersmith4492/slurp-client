@@ -31,11 +31,11 @@ class ShowReviews extends Component {
     return (
 
       <Fragment>
-        <h3>Ramen Reviews:</h3>
+        <h3 className="review-title">List of Ramen Reviews:</h3>
         <ul>
           {this.state.reviews.map(review => (
-            <p key={review.id}>
-              <Link to={`/reviews/${review.id}`}>{review.name}</Link>
+            <p className="review-list" key={review.id}>
+              <Link className="review-link" to={`/reviews/${review.id}`}>{review.name} <img className="list-image"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07fXt5MEji22iI73CTiy-L-8dwjOhj2qdDXiUHm1OLpHjNb-1gA" alt="ramen-bowl"/></Link>
             </p>
           ))}
         </ul>

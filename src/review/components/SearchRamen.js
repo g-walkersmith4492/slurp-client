@@ -36,8 +36,9 @@ class SearchRamen extends Component {
   render () {
     if (!this.state.ramens) {
       return (<form className='search-ramen-form' onSubmit={this.onSearchRamen}>
-        <h3>Find New Ramen Spots!</h3>
+        <h3 className="yelp-header-main">Find New Ramen Spots!</h3>
         <input
+          className="search-input"
           required
           type="text"
           name="search"
@@ -45,36 +46,38 @@ class SearchRamen extends Component {
           placeholder="location"
           onChange={this.handleChange}
         />
-        <button className="btn nav-button" type="submit">Search!</button>
+        <button className="btn search-button" type="submit">Search!</button>
       </form>
       )
     }
 
     return (
-      <form className='search-ramen-form' onSubmit={this.onSearchRamen}>
-        <input
-          required
-          type="text"
-          name="search"
-          value={this.state.search}
-          placeholder="location"
-          onChange={this.handleChange}
-        />
-        <button className="btn nav-button" type="submit">Search!</button>
-        <h3>Find New Ramen Spots!</h3>
-        <h4 className="yelp-header">Restaurants:</h4>
-        {this.state.ramens.map(ramen => (
-          <Card key={ ramen.alias }>
-            <Card.Img className="yelp-image"variant="top" src={ramen.image_url} />
-            <Card.Body>
-              <Card.Title>{ramen.name}</Card.Title>
-              <Card.Text>
-                {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}<br/> rating: <strong>{ramen.rating}/5</strong><br/> <span className="ramen-price">{ramen.price}</span>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        ))}
-      </form>
+      <div className="search-page">
+        <form className='search-ramen-form' onSubmit={this.onSearchRamen}>
+          <input
+            required
+            type="text"
+            name="search"
+            value={this.state.search}
+            placeholder="location"
+            onChange={this.handleChange}
+          />
+          <button className="btn nav-button" type="submit">Search!</button>
+          <h3 className="yelp-header-main">Find New Ramen Spots!</h3>
+          <h4 className="yelp-header-second">Restaurants:</h4>
+          {this.state.ramens.map(ramen => (
+            <Card key={ ramen.alias }>
+              <Card.Img className="yelp-image"variant="top" src={ramen.image_url} />
+              <Card.Body>
+                <Card.Title>{ramen.name}</Card.Title>
+                <Card.Text>
+                  {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}<br/> rating: <strong>{ramen.rating}/5</strong><br/> <span className="ramen-price">{ramen.price}</span>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          ))}
+        </form>
+      </div>
     )
   }
 }

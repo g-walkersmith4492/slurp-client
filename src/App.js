@@ -13,6 +13,7 @@ import ShowReview from './review/components/ShowReview'
 import CreateReview from './review/components/CreateReview'
 import EditReview from './review/components/EditReview'
 import SearchRamen from './review/components/SearchRamen'
+import Home from './review/components/Home'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -62,6 +63,9 @@ class App extends Component {
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
+          )} />
+          <Route exact path='/' render={() => (
+            <Home />
           )} />
           <Route path='/sign-in' render={() => (
             <SignIn alert={this.alert} setUser={this.setUser} />
