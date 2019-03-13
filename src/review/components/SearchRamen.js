@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { searchRamen } from '../api'
 import messages from '../messages'
 import Card from 'react-bootstrap/Card'
+import Carousel from 'react-bootstrap/Carousel'
 
 class SearchRamen extends Component {
   constructor () {
@@ -25,7 +26,6 @@ class SearchRamen extends Component {
     searchRamen(this.state.search, user)
       .then(response => this.setState({ ramens: response.data.businesses }))
       .then(response => console.log(this.state.ramens))
-      .then(() => alert(messages.signInSuccess, 'success'))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
@@ -47,6 +47,55 @@ class SearchRamen extends Component {
           onChange={this.handleChange}
         />
         <button className="btn search-button" type="submit">Search!</button>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 carousel-image"
+              src="https://grapee.jp/en/wp-content/uploads/14531_01.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption className="carousel-text">
+              <h3>Nakiryu</h3>
+              <p>Tokyo, Japan</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 carousel-image"
+              src="https://www.hiddenboston.com/images/Ganko.jpg"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption className="carousel-text">
+              <h3>Ganko Ittetsu</h3>
+              <p>Brookline, MA</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 carousel-image"
+              src="https://static1.squarespace.com/static/574a312720c6471e63ec3849/58c368fb9f7456bf7d73309f/58c368fbcd0f68690ff095a0/1489201409149/OKONOMI+exterior.jpg?format=500w"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption className="carousel-text">
+              <h3>Yuji Ramen</h3>
+              <p>Brooklyn, New York</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 carousel-image"
+              src="http://www.tsuta.com/images/welcome/welcome_image03.jpg"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption className="carousel-text">
+              <h4>Tsuta Ramen</h4>
+              <p>Tokyo, Japan</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </form>
       )
     }
@@ -54,17 +103,17 @@ class SearchRamen extends Component {
     return (
       <div className="search-page">
         <form className='search-ramen-form' onSubmit={this.onSearchRamen}>
+          <h3 className="yelp-header-main">Find New Ramen Spots!</h3>
           <input
             required
+            className="search-input"
             type="text"
             name="search"
             value={this.state.search}
             placeholder="location"
             onChange={this.handleChange}
           />
-          <button className="btn nav-button" type="submit">Search!</button>
-          <h3 className="yelp-header-main">Find New Ramen Spots!</h3>
-          <h4 className="yelp-header-second">Restaurants:</h4>
+          <button className="btn search-button" type="submit">Search!</button>
           {this.state.ramens.map(ramen => (
             <Card key={ ramen.alias }>
               <Card.Img className="yelp-image"variant="top" src={ramen.image_url} />

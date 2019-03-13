@@ -28,11 +28,11 @@ class EditReview extends Component {
     const { alert, user } = this.props
     editReview(this.state, user, this.props.match.params.id)
       .then(() => this.setState({ shouldRedirect: true }))
-      .then(() => alert(messages.signInSuccess, 'success'))
+      .then(() => alert(messages.editReviewSuccess, 'success'))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.editReviewFailure, 'danger')
       })
   }
   render () {

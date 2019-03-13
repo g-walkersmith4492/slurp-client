@@ -27,12 +27,12 @@ class CreateReview extends Component {
     const { alert, user } = this.props
 
     createReview(this.state, user)
-      .then(() => alert(messages.signInSuccess, 'success'))
+      .then(() => alert(messages.createReviewSuccess, 'success'))
       .then(() => this.setState({ shouldRedirect: true }))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.createReviewFailure, 'danger')
       })
   }
 
@@ -110,9 +110,8 @@ class CreateReview extends Component {
               type="text"
               name="comments"
               value={comments}
-              placeholder="Talk about your bowl!"
               onChange={this.handleChange}
-              className="form-control"
+              className="form-control review-input"
             />
           </div>
           <button className="btn" type="submit">Submit your review!!</button>

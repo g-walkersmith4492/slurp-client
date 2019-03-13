@@ -99,6 +99,7 @@ $charcoal: #ccc;
   text-align: center;
   padding: 15px;
   margin: 25px;
+  height: 150;
 }
 
 .create-review-form {
@@ -140,6 +141,11 @@ $charcoal: #ccc;
   margin: 30px;
 }
 
+.review-link:hover {
+  font-size: 28px;
+  color: red;
+}
+
 .review-title {
   font-size: 36px;
   font-family: 'Gloria Hallelujah', cursive;
@@ -179,10 +185,9 @@ video {
   height: calc(100vh - 100px);
 }
 
-.create-review-form {
+label {
   font-family: 'Gloria Hallelujah', cursive;
 }
-
 .edit-review-form {
   text-align: center;
 }
@@ -192,7 +197,7 @@ video {
   color: RGB(254, 227, 121);
   text-shadow: 1px 1px black;
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .search-input {
@@ -200,4 +205,41 @@ video {
   width: 500px;
   font-size: 24px;
   padding: 10px;
+  border-radius: 5px;
+}
+
+.search-button {
+  font-family: 'Gloria Hallelujah', cursive;
+  border: 1px solid black;
+  margin-left: 10px;
+  height: 40px;
+  color: #BA2F00;
+  text-shadow: 1px 1px black;
+  font-size: 14px;
+}
+
+.search-button:hover {
+  font-size: 18px;
+}
+
+.review-input {
+  height: 200px;
+}
+
+.carousel-image {
+  margin-top: 20px;
+  border: 5px solid black;
+  display: block;
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-text {
+  font-size: 12px;
+  background-color: RGB(255, 255, 255, .3);
+  width: 200px;
+  margin: 0 auto;
+  color:black;
+  height: 120px;
+  font-family: 'Gloria Hallelujah', cursive;
 }
