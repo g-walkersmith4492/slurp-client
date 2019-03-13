@@ -47,7 +47,8 @@ class CreateReview extends Component {
     return (
       <div className="create-page">
         <form className='create-review-form' onSubmit={this.onCreateReview}>
-          <h3>Review Some Ramen!</h3>
+          <h3 className="create-title">Review Some Ramen!</h3>
+          <img className="ramen-cat" src="https://media.tenor.com/images/e9885839feb47ef98342a16b6924989e/tenor.gif" alt="cat ramen"/>
           <div className="form-group">
             <label>Restaurant Name</label>
             <input

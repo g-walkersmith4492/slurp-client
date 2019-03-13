@@ -62,3 +62,27 @@ export const searchRamen = (search, user) => {
     data: { search }
   })
 }
+
+export const searchByRating = (search, user, specs) => {
+  console.log(specs)
+  return axios({
+    url: apiUrl + '/yelp-search-specs',
+    method: 'post',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+    data: { search, specs }
+  })
+}
+
+export const searchByPrice = (search, user, priceNum) => {
+  console.log(priceNum)
+  return axios({
+    url: apiUrl + '/yelp-search-price',
+    method: 'post',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+    data: { search, priceNum }
+  })
+}
