@@ -70,7 +70,7 @@ class SignUp extends Component {
           placeholder="Confirm Password"
           onChange={this.handleChange}
         />
-        <button type="submit">Sign Up</button>
+        <button className="auth-button" type="submit">Sign Up</button>
       </form>
     )
   }

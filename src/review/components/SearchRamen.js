@@ -69,7 +69,7 @@ class SearchRamen extends Component {
             <Card.Body>
               <Card.Title>{ramen.name}</Card.Title>
               <Card.Text>
-                {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}
+                {ramen.location.address1}, {ramen.location.city}, {ramen.location.zip_code}<br/> rating: <strong>{ramen.rating}/5</strong><br/> <span className="ramen-price">{ramen.price}</span>
               </Card.Text>
             </Card.Body>
           </Card>

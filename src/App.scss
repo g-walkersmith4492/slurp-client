@@ -111,3 +111,25 @@ body {
   border: 1px solid black;
   font-size: 18px
 }
+
+.ramen-price {
+  color: green;
+}
+
+.auth-form {
+  height: 400px;
+  width: 300px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.auth-button {
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+}
+
+.auth-button:hover {
+  background-color: white;
+  color: red;
+}

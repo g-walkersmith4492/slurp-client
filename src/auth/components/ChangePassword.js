@@ -58,7 +58,7 @@ class ChangePassword extends Component {
           placeholder="New Password"
           onChange={this.handleChange}
         />
-        <button type="submit">Change Password</button>
+        <button className="auth-button" type="submit">Change Password</button>
       </form>
     )
   }

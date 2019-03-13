@@ -45,77 +45,79 @@ class CreateReview extends Component {
     }
 
     return (
-      <form className='create-review-form' onSubmit={this.onCreateReview}>
-        <h3>Review Some Ramen!</h3>
-        <div className="form-group">
-          <label>Restaurant Name</label>
-          <input
-            required
-            type="text"
-            name="name"
-            value={name}
-            placeholder="Name"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label>Type of Ramen</label>
-          <input
-            type="text"
-            name="ramen_type"
-            value={this.state.ramen_type}
-            placeholder="Type of Ramen"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label>Price</label>
-          <input
-            type="text"
-            name="price"
-            value={price}
-            placeholder="Price of your Bowl"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label>Rating</label>
-          <input
-            type="text"
-            name="rating"
-            value={rating}
-            placeholder="Rating (1-10)"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label>Restaurant Location</label>
-          <input
-            type="text"
-            name="location"
-            value={location}
-            placeholder="Address"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label>Review</label>
-          <input
-            type="text"
-            name="comments"
-            value={comments}
-            placeholder="Talk about your bowl!"
-            onChange={this.handleChange}
-            className="form-control"
-          />
-        </div>
-        <button className="btn" type="submit">Submit your review!!</button>
-      </form>
+      <div className="create-page">
+        <form className='create-review-form' onSubmit={this.onCreateReview}>
+          <h3>Review Some Ramen!</h3>
+          <div className="form-group">
+            <label>Restaurant Name</label>
+            <input
+              required
+              type="text"
+              name="name"
+              value={name}
+              placeholder="Name"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Type of Ramen</label>
+            <input
+              type="text"
+              name="ramen_type"
+              value={this.state.ramen_type}
+              placeholder="Type of Ramen"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Price</label>
+            <input
+              type="text"
+              name="price"
+              value={price}
+              placeholder="Price of your Bowl"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Rating</label>
+            <input
+              type="text"
+              name="rating"
+              value={rating}
+              placeholder="Rating (1-10)"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Restaurant Location</label>
+            <input
+              type="text"
+              name="location"
+              value={location}
+              placeholder="Address"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Review</label>
+            <input
+              type="text"
+              name="comments"
+              value={comments}
+              placeholder="Talk about your bowl!"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <button className="btn" type="submit">Submit your review!!</button>
+        </form>
+      </div>
     )
   }
 }
