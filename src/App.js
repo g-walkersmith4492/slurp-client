@@ -53,13 +53,15 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header user={user} />
-        {alerts.map((alert, index) => (
-          <Alert className={alert.fade ? 'fade-out' : ''}key={index} dismissible variant={alert.type}>
-            <Alert.Heading>
-              {alert.message}
-            </Alert.Heading>
-          </Alert>
-        ))}
+        <div className="user-message">
+          {alerts.map((alert, index) => (
+            <Alert className={alert.fade ? 'fade-out' : ''}key={index} dismissible variant={alert.type}>
+              <Alert.Heading>
+                {alert.message}
+              </Alert.Heading>
+            </Alert>
+          ))}
+        </div>
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />

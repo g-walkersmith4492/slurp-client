@@ -136,7 +136,7 @@ $charcoal: #ccc;
 }
 
 .review-link:hover {
-  color: black;
+  color: #BA2F00;
 }
 
 .review-title {
@@ -217,11 +217,11 @@ label {
 }
 
 .search-button:hover {
-  font-size: 18px;
+  text-decoration: underline;
 }
 
 .review-input {
-  height: 200px;
+  height: 400px;
 }
 
 .carousel-image {
@@ -231,6 +231,18 @@ label {
   height: 425px;
   object-fit: cover;
   width: auto;
+}
+
+.user-message {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  Alert {
+    margin: 5px;
+    width: 50%;
+  }
 }
 
 .carousel-text {
@@ -253,7 +265,8 @@ label {
 .ramen-cat {
   height: 100px;
   text-align: center;
-  margin: 5px;
+  margin: 5px auto;
+  float: right;
 }
 
 .create-button {
@@ -302,6 +315,9 @@ label {
 
 .review-display {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 1000px;
+  height: 400px;
+  color: white;
   transition: 0.3s;
   margin: 10px;
   margin-top: 100px;
@@ -309,6 +325,11 @@ label {
   background-image: url('http://mandw.co/wp-content/uploads/2018/09/unfinished-table-tops-wood-table-top-pictures.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  text-shadow: 2px 2px black;
+}
+
+.review-container {
+  float: left;
 }
 
 .review-title {
@@ -316,4 +337,18 @@ label {
   text-shadow: 1px 1px black;
   text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
+}
+.spicy-ramen {
+  float: right;
+}
+
+.review-button {
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.first-label {
+  float: left;
+  clear: both;
 }

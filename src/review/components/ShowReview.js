@@ -52,16 +52,19 @@ class ShowReview extends Component {
 
     return (
       <div className="review-display">
-        <h2 className="review-title">{review.name}</h2>
-        <h4><label>Type:</label>           {review.ramen_type}</h4>
-        <h4><label>Price:</label>          {review.price}</h4>
-        <h4><label>Rating:</label>         {review.rating}</h4>
-        <h4><label>Location:</label>       {review.location}</h4>
-        <h4><label>Comments:</label>       {review.comments}</h4>
-        <Link to={`/review${review.id}/edit`}>
-          <button>Edit Your Review</button>
-        </Link>
-        <button className="btn" onClick={() => this.deleteRev(review.id)}>X</button>
+        <div className="review-container">
+          <h2 className="review-title">{review.name}</h2>
+          <h4><label>Type:</label>           {review.ramen_type}</h4>
+          <h4><label>Price:</label>          {review.price}</h4>
+          <h4><label>Rating:</label>         {review.rating}</h4>
+          <h4><label>Location:</label>       {review.location}</h4>
+          <h4><label>Comments:</label>       {review.comments}</h4>
+          <Link to={`/review${review.id}/edit`}>
+            <button className="btn review-button">Edit Review</button>
+          </Link>
+          <button className="btn review-button" onClick={() => this.deleteRev(review.id)}>Delete Review</button>
+        </div>
+        <img className="spicy-ramen" src="https://i.imgur.com/XtB0WP2.png" alt="spicy-ramen" />
       </div>
     )
   }

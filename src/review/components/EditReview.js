@@ -46,12 +46,10 @@ class EditReview extends Component {
     return (
       <div className="edit-page">
         <form className='edit-review-form' onSubmit={this.onEditReview}>
-          <h3 className="create-title">Edit your review!</h3>
-          <div>
-            <img className="ramen-cat" src="https://media.tenor.com/images/e9885839feb47ef98342a16b6924989e/tenor.gif" alt="cat ramen"/>
-          </div>
-          <label>Restaurant Name</label>
+          <img className="ramen-cat" src="https://media.tenor.com/images/e9885839feb47ef98342a16b6924989e/tenor.gif" alt="cat ramen"/>
+          <h3 className="create-title">Review Some Ramen!</h3>
           <div className="form-group">
+            <label className="first-label">Restaurant Name</label>
             <input
               required
               type="text"
@@ -108,11 +106,11 @@ class EditReview extends Component {
           </div>
           <label>Review</label>
           <div className="form-group">
-            <input
+            <textarea
+              rows="7"
               type="text"
               name="comments"
               value={comments}
-              placeholder="Talk about your bowl!"
               onChange={this.handleChange}
               className="form-control review-input"
             />

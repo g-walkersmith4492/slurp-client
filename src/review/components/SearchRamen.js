@@ -196,7 +196,7 @@ class SearchRamen extends Component {
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
-                src="http://www.tsuta.com/images/welcome/welcome_image03.jpg"
+                src="https://i.imgur.com/Kxa7MEg.jpg"
                 alt="Third slide"
               />
 
