@@ -1,12 +1,12 @@
 # Capstone Project
 
-## Link to API Respoitory
+## Link to API Repository
 
 https://github.com/g-walkersmith4492/slurp-api
 
 ## What Slurp does and how it works:
 
-Slurp is an application where users can review ramen restaurants, view others reviews of ramen restaurants, and search to find ramen restaurants domestically and around the world.  You can search by location with the preference for best match, higest rated, or by price.  The user can only use these features once they sign up for Slurp and sign in to their account.  The user can edit their reviews and delete their reviews.  The user also has the capability to change their password and sign out of their account.
+Slurp is an application where users can review ramen restaurants, view others reviews of ramen restaurants, and search to find ramen restaurants domestically and around the world.  You can search by location with the preference for best match, highest rated, or by price.  The user can only use these features once they sign up for Slurp and sign in to their account.  The user can edit their reviews and delete their reviews.  The user also has the capability to change their password and sign out of their account.
 
 Slurp's back-end is built using Rails/PostgreSQL which accepts numerous attributes for a resource called Review.  This was done using an open read controller, thus a signed in user can view the reviews of everyone using Slurp, but not edit or delete them.  The user resource was already set up in the rails api template document.  The relationship set up on the background is that a User has many reviews.  The app is deployed on heroku so that it can be accessed by the deployed front-end.
 
@@ -59,7 +59,7 @@ As a user, I want to be able to see a list of ramen restaurants for a given loca
 
 One problem I currently have is refactoring the function which determines what price parameter to pass to the third party api.  Although it works, this is done through four different functions, when I feel as though it could be done through one.  Additionally, I would really like if users could use AWS to upload their own pictures for reviews.
 
-A future plan I have for the app is to change the currenty display of the rating (1/5) to something which displays stars instead.  I also have a lot of inconsistent styling (especially with buttons), which make the application look a little bit disjointed.  Additionally, I do not really like the way one resource is displayed on the page as the text is hard to read, so I would like to update that in the future.
+A future plan I have for the app is to change the currently display of the rating (1/5) to something which displays stars instead.  I also have a lot of inconsistent styling (especially with buttons), which make the application look a little bit disjointed.  Additionally, I do not really like the way one resource is displayed on the page as the text is hard to read, so I would like to update that in the future.
 
 ## Planning/Development Process:
 
