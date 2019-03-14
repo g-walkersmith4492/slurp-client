@@ -34,7 +34,7 @@ class ShowReview extends Component {
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.deleteReviewFailure, 'danger')
       })
   }
 

@@ -11,6 +11,9 @@ export default {
                          ' and try again.',
   createReviewSuccess: 'Review created!',
   createReviewFailure: 'Unable to create this review!',
-  editReviewSuccess: 'Review created!',
-  editReviewFailure: 'You can only edit your own reviews!'
+  editReviewSuccess: 'Review edited!',
+  editReviewFailure: 'Unsuccessful! Reminder: You can only edit your own reviews!',
+  deleteReviewSuccess: 'Review Deleted!',
+  deleteReviewFailure: 'Unsuccessful! Reminder: You can only delete your own reviews!',
+  searchRamenFailure: 'No results found!'
 }

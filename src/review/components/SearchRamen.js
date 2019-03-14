@@ -30,12 +30,17 @@ class SearchRamen extends Component {
     const { alert, user } = this.props
 
     searchRamen(this.state.search, user)
-      .then(response => this.setState({ ramens: response.data.businesses }))
-      .then(response => console.log(this.state.ramens))
+      .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
+      .then(response => console.log(this.state))
+      .then(() => {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
@@ -46,11 +51,15 @@ class SearchRamen extends Component {
     const specs = 'rating'
     searchByRating(this.state.search, user, specs)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state.ramens))
+      .then(() => {
+        if (!this.state.ramens) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
@@ -62,10 +71,15 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(response => console.log(this.state.ramens))
+      .then(() => {
+        if (!this.state.ramens) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
@@ -77,10 +91,15 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(response => console.log(this.state.ramens))
+      .then(() => {
+        if (!this.state.ramens) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
@@ -92,10 +111,15 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(response => console.log(this.state.ramens))
+      .then(() => {
+        if (!this.state.ramens) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
@@ -107,15 +131,20 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(response => console.log(this.state.ramens))
+      .then(() => {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
+          alert(messages.searchRamenFailure, 'danger')
+        }
+      })
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
-        alert(messages.signInFailure, 'danger')
+        alert(messages.searchRamenFailure, 'danger')
       })
   }
 
   render () {
-    if (!this.state.ramens) {
+    if (!this.state.ramens || this.state.ramens.length < 1) {
       return (
         <div>
           <form className='search-ramen-form' onSubmit={this.onSearchRamen}>
@@ -131,10 +160,10 @@ class SearchRamen extends Component {
             />
             <button className="btn search-button" type="submit">Best Match</button>
             <button className="btn search-button search-by-rating-button" onClick={this.onSearchByRating}type="button">Search By Rating</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice1} type="button">$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice2} type="button">$$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice1} type="button">$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice2} type="button">$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
           </form>
           <Fragment>
           </Fragment>
@@ -207,10 +236,10 @@ class SearchRamen extends Component {
           <section className="search-buttons">
             <button className="btn search-button" type="submit">Best Match</button>
             <button className="btn search-button search-by-rating-button" onClick={this.onSearchByRating} type="button">Search by Rating</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice1} type="button">$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice2} type="button">$$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
-            <button className="btn search-button search-by-price1-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice1} type="button">$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice2} type="button">$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
+            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
           </section>
           {this.state.ramens.map(ramen => (
             <Card key={ ramen.alias }>

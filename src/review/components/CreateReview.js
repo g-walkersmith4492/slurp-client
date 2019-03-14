@@ -115,7 +115,7 @@ class CreateReview extends Component {
               className="form-control review-input"
             />
           </div>
-          <button className="btn" type="submit">Submit your review!!</button>
+          <button className="btn create-button" type="submit">Submit your review!!</button>
         </form>
       </div>
     )

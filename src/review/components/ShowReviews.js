@@ -29,17 +29,16 @@ class ShowReviews extends Component {
       return <p>loading...</p>
     }
     return (
-
-      <Fragment>
-        <h3 className="review-title">List of Ramen Reviews:</h3>
-        <ul>
+      <div className="show-page">
+        <Fragment>
+          <h3 className="review-title">Slurp Reviews:</h3>
           {this.state.reviews.map(review => (
-            <p className="review-list" key={review.id}>
+            <div className="review-list" key={review.id}>
               <Link className="review-link" to={`/reviews/${review.id}`}>{review.name} <img className="list-image"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07fXt5MEji22iI73CTiy-L-8dwjOhj2qdDXiUHm1OLpHjNb-1gA" alt="ramen-bowl"/></Link>
-            </p>
+            </div>
           ))}
-        </ul>
-      </Fragment>
+        </Fragment>
+      </div>
     )
   }
 }

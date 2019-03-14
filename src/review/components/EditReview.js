@@ -46,54 +46,77 @@ class EditReview extends Component {
     return (
       <div className="edit-page">
         <form className='edit-review-form' onSubmit={this.onEditReview}>
+          <h3 className="create-title">Edit your review!</h3>
+          <div>
+            <img className="ramen-cat" src="https://media.tenor.com/images/e9885839feb47ef98342a16b6924989e/tenor.gif" alt="cat ramen"/>
+          </div>
           <label>Restaurant Name</label>
-          <input
-            required
-            type="text"
-            name="name"
-            value={name}
-            placeholder="Name"
-            onChange={this.handleChange}
-          />
+          <div className="form-group">
+            <input
+              required
+              type="text"
+              name="name"
+              value={name}
+              placeholder="Name"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
           <label>Type of Ramen</label>
-          <input
-            type="text"
-            name="ramen_type"
-            value={this.state.ramen_type}
-            placeholder="Type of Ramen"
-            onChange={this.handleChange}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              name="ramen_type"
+              value={this.state.ramen_type}
+              placeholder="Type of Ramen"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
           <label>Price</label>
-          <input
-            type="text"
-            name="price"
-            value={price}
-            placeholder="Price of your Bowl"
-            onChange={this.handleChange}
-          />
-          <input
-            type="text"
-            name="rating"
-            value={rating}
-            placeholder="Rating (1-10)"
-            onChange={this.handleChange}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              name="price"
+              value={price}
+              placeholder="Price of your Bowl"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
+          <label>Rating</label>
+          <div className="form-group">
+            <input
+              type="text"
+              name="rating"
+              value={rating}
+              placeholder="Rating (1-10)"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
           <label>Restaurant Location</label>
-          <input
-            type="text"
-            name="location"
-            value={location}
-            placeholder="Address"
-            onChange={this.handleChange}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              name="location"
+              value={location}
+              placeholder="Address"
+              onChange={this.handleChange}
+              className="form-control"
+            />
+          </div>
           <label>Review</label>
-          <input
-            type="text"
-            name="comments"
-            value={comments}
-            placeholder="Talk about your bowl!"
-            onChange={this.handleChange}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              name="comments"
+              value={comments}
+              placeholder="Talk about your bowl!"
+              onChange={this.handleChange}
+              className="form-control review-input"
+            />
+          </div>
           <button className="btn" type="submit">Save Changes!</button>
         </form>
       </div>

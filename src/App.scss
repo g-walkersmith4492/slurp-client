@@ -32,8 +32,8 @@ $charcoal: #ccc;
 .auth-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 15% auto 0;
+  justify-content: flex-start;
+  margin-top: 200px;
   max-width: 600px;
 
   h3,
@@ -58,11 +58,11 @@ $charcoal: #ccc;
 .card {
   max-width: 30%;
   margin: 15px;
-  border: 1px solid black;
   float: left;
   height: 400px;
   padding: 10px;
-
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 .yelp-image {
   height: 200px;
@@ -133,16 +133,19 @@ $charcoal: #ccc;
 }
 
 .review-link {
-  font-size: 24px;
-  color: red;
+  float: left;
+  font-size: 18px;
+  color: black;
   border: 1px solid black;
-  padding: 39px;
-  margin: 30px;
+  padding: 15px;
+  margin: 15px;
+  max-width: 40%;
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 5px;
 }
 
 .review-link:hover {
-  font-size: 28px;
-  color: red;
+  color: black;
 }
 
 .review-title {
@@ -154,7 +157,7 @@ $charcoal: #ccc;
 
 
 .list-image {
-  height: 100px;
+  height: 50px;
 }
 
 #video-wrapper {
@@ -166,6 +169,7 @@ $charcoal: #ccc;
   right: 0;
   bottom: 0;
   left: 0;
+  margin-top: 10px;
 
 }
 
@@ -188,7 +192,11 @@ label {
   font-family: 'Gloria Hallelujah', cursive;
 }
 .edit-review-form {
-  text-align: center;
+  padding: 25px;
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid black;
+  font-size: 18px
 }
 
 
@@ -205,6 +213,7 @@ label {
   font-size: 36px;
   padding: 10px;
   border-radius: 5px;
+  margin: 5px;
 }
 
 .search-button {
@@ -212,8 +221,7 @@ label {
   border: 1px solid black;
   margin-left: 10px;
   height: 40px;
-  color: #BA2F00;
-  text-shadow: 1px 1px black;
+  color: black;
   font-size: 14px;
 }
 
@@ -229,7 +237,7 @@ label {
   margin-top: 20px;
   border: 5px solid black;
   display: block;
-  height: 450px;
+  height: 425px;
   object-fit: cover;
   width: auto;
 }
@@ -255,4 +263,32 @@ label {
   height: 100px;
   text-align: center;
   margin: 5px;
+}
+
+.create-button {
+  color: #BA2F00;
+  font-size: 16px !important;
+  margin: 10px;
+  width: 90px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.create-button:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.search-buttons {
+  margin: 10px;
+}
+
+.search-by-price-button:hover {
+  color: green !important;
+}
+
+
+
+.background-pic {
+  height: 500px;
+  float: right;
 }
