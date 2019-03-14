@@ -2,7 +2,6 @@ import React from 'react'
 import video from '../../SlurpAnimation.mp4'
 
 const Home = () => {
-  console.log('hello')
   return (
     <div className="home-background">
       <div id="video-wrapper">
