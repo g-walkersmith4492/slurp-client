@@ -33,7 +33,7 @@ https://g-walkersmith4492.github.io/slurp-client/
 
 ## Wireframe and User Stories:
 
- ![Wireframe]https://i.imgur.com/clT7cYb.jpg
+ ![Wireframe](https://i.imgur.com/clT7cYb.jpg)
 
 As a user, I want to be able to sign up for Slurp
 
