@@ -82,10 +82,10 @@ class EditReview extends Component {
               className="form-control"
             />
           </div>
-          <label>Rating</label>
+          <label>Rating (1-100)</label>
           <div className="form-group">
             <input
-              type="text"
+              type="number"
               name="rating"
               value={rating}
               placeholder="Rating (1-10)"

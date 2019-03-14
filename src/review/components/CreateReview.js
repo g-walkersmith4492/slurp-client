@@ -84,9 +84,9 @@ class CreateReview extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Rating</label>
+            <label>Rating (1-100)</label>
             <input
-              type="text"
+              type="number"
               name="rating"
               value={rating}
               placeholder="Rating (1-10)"
