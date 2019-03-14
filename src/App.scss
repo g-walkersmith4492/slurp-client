@@ -47,14 +47,6 @@ $charcoal: #ccc;
   }
 }
 
-// .ramen-search-div {
-//   border: 1px solid black;
-//   padding: 5px;
-//   margin: 10px 5px;
-//   flex-direction: row;
-//   max-width: 20%
-// }
-
 .card {
   max-width: 30%;
   margin: 15px;
@@ -117,7 +109,6 @@ $charcoal: #ccc;
 .auth-form {
   height: 400px;
   width: 300px;
-  font-family: 'Gloria Hallelujah', cursive;
 }
 
 .auth-button {
@@ -267,9 +258,12 @@ label {
 
 .create-button {
   color: #BA2F00;
+  margin: 0 auto;
+  border: 1px solid black;
   font-size: 16px !important;
   margin: 10px;
-  width: 90px;
+  width: 150px;
+  text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -291,4 +285,34 @@ label {
 .background-pic {
   height: 500px;
   float: right;
+}
+
+.auth-form-title {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.auth-page {
+  background-image: url('https://media.giphy.com/media/AmCy8Uj0XhmJcXccEG/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 400px;
+}
+
+.review-display {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: 10px;
+  margin-top: 100px;
+  padding: 20px;
+  background-image: url('http://mandw.co/wp-content/uploads/2018/09/unfinished-table-tops-wood-table-top-pictures.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.review-title {
+  color: RGB(254, 227, 121);
+  text-shadow: 1px 1px black;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
 }

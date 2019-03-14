@@ -16,7 +16,6 @@ class ShowReviews extends Component {
     const { alert } = this.props
     showReviews()
       .then(response => this.setState({ reviews: response.data.reviews }))
-      .then(response => console.log(this.state.reviews))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })

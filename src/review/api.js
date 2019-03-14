@@ -26,8 +26,6 @@ export const deleteReview = (user, id) => {
 }
 
 export const createReview = (reviewData, user) => {
-  console.log(user)
-  console.log(reviewData)
   return axios({
     url: apiUrl + '/reviews',
     method: 'post',
@@ -41,7 +39,6 @@ export const createReview = (reviewData, user) => {
 }
 
 export const editReview = (reviewData, user, id) => {
-  console.log(reviewData)
   return axios({
     url: apiUrl + '/reviews/' + id,
     method: 'patch',
@@ -64,7 +61,6 @@ export const searchRamen = (search, user) => {
 }
 
 export const searchByRating = (search, user, specs) => {
-  console.log(specs)
   return axios({
     url: apiUrl + '/yelp-search-specs',
     method: 'post',
@@ -76,7 +72,6 @@ export const searchByRating = (search, user, specs) => {
 }
 
 export const searchByPrice = (search, user, priceNum) => {
-  console.log(priceNum)
   return axios({
     url: apiUrl + '/yelp-search-price',
     method: 'post',

@@ -17,7 +17,6 @@ class ShowReview extends Component {
 
   componentDidMount () {
     const { alert } = this.props
-    console.log(this.props)
     showReview(this.props.match.params.id)
       .then(response => this.setState({ review: response.data.review }))
       .catch(error => {
@@ -31,6 +30,7 @@ class ShowReview extends Component {
     const { alert, user } = this.props
     deleteReview(user, id)
       .then(() => this.setState({ shouldRedirect: true }))
+      .then(() => alert(messages.deleteReviewSuccess, 'danger'))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
@@ -39,7 +39,6 @@ class ShowReview extends Component {
   }
 
   render () {
-    console.log(this.state)
     const { review, shouldRedirect } = this.state
 
     if (shouldRedirect) {
@@ -52,16 +51,18 @@ class ShowReview extends Component {
     }
 
     return (
-      <article>
-        <h4>{review.name}</h4>
-        <p>Location: {review.location}</p>
-        <p>Price: {review.price}</p>
-        <p>ABV: {review.comments}</p>
+      <div className="review-display">
+        <h2 className="review-title">{review.name}</h2>
+        <h4><label>Type:</label>           {review.ramen_type}</h4>
+        <h4><label>Price:</label>          {review.price}</h4>
+        <h4><label>Rating:</label>         {review.rating}</h4>
+        <h4><label>Location:</label>       {review.location}</h4>
+        <h4><label>Comments:</label>       {review.comments}</h4>
         <Link to={`/review${review.id}/edit`}>
           <button>Edit Your Review</button>
         </Link>
         <button className="btn" onClick={() => this.deleteRev(review.id)}>X</button>
-      </article>
+      </div>
     )
   }
 }

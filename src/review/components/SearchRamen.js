@@ -20,9 +20,7 @@ class SearchRamen extends Component {
   })
 
   onSetValue = (num) => {
-    console.log('set value is working')
     this.setState({ priceNumber: num })
-    console.log(this.state.priceNumber)
   }
   onSearchRamen = event => {
     event.preventDefault()
@@ -31,7 +29,6 @@ class SearchRamen extends Component {
 
     searchRamen(this.state.search, user)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state))
       .then(() => {
         if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')
@@ -46,7 +43,6 @@ class SearchRamen extends Component {
 
   onSearchByRating = event => {
     event.preventDefault()
-    console.log('hello')
     const { alert, user } = this.props
     const specs = 'rating'
     searchByRating(this.state.search, user, specs)
@@ -66,11 +62,9 @@ class SearchRamen extends Component {
   onSearchByPrice1 = event => {
     event.preventDefault()
     const priceNum = '1'
-    console.log('hello')
     const { alert, user } = this.props
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state.ramens))
       .then(() => {
         if (!this.state.ramens) {
           alert(messages.searchRamenFailure, 'danger')
@@ -86,11 +80,9 @@ class SearchRamen extends Component {
   onSearchByPrice2 = event => {
     event.preventDefault()
     const priceNum = '2'
-    console.log('hello')
     const { alert, user } = this.props
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state.ramens))
       .then(() => {
         if (!this.state.ramens) {
           alert(messages.searchRamenFailure, 'danger')
@@ -106,11 +98,9 @@ class SearchRamen extends Component {
   onSearchByPrice3 = event => {
     const priceNum = '3'
     event.preventDefault()
-    console.log('hello')
     const { alert, user } = this.props
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state.ramens))
       .then(() => {
         if (!this.state.ramens) {
           alert(messages.searchRamenFailure, 'danger')
@@ -126,11 +116,9 @@ class SearchRamen extends Component {
   onSearchByPrice4 = event => {
     const priceNum = '4'
     event.preventDefault()
-    console.log('hello')
     const { alert, user } = this.props
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
-      .then(response => console.log(this.state.ramens))
       .then(() => {
         if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')

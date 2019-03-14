@@ -39,7 +39,7 @@ class SignIn extends Component {
     return (
       <div className="auth-page">
         <form className='auth-form' onSubmit={this.onSignIn}>
-          <h3>Sign In</h3>
+          <h3 className="auth-form-title">Sign In</h3>
           <label htmlFor="email">Email</label>
           <input
             required
@@ -60,7 +60,6 @@ class SignIn extends Component {
           />
           <button className="auth-button" type="submit">Sign In</button>
         </form>
-        <img className="background-pic"src="https://i.imgur.com/EirW7b5.png" alt="slurp-pic" />
       </div>
     )
   }
