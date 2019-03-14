@@ -58,7 +58,7 @@ class ShowReview extends Component {
           <h4><label>Price:</label>          {review.price}</h4>
           <h4><label>Rating:</label>         {review.rating}</h4>
           <h4><label>Location:</label>       {review.location}</h4>
-          <h4><label>Comments:</label>       {review.comments}</h4>
+          <p className="comments-paragraph"><label>Comments:</label>       {review.comments}</p>
           <Link to={`/review${review.id}/edit`}>
             <button className="btn review-button">Edit Review</button>
           </Link>

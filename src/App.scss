@@ -281,10 +281,6 @@ label {
   color: white !important;
 }
 
-.create-button:hover {
-  color: red;
-  text-decoration: underline;
-}
 
 .search-buttons {
   margin: 10px;
@@ -322,7 +318,7 @@ label {
   margin: 10px;
   margin-top: 100px;
   padding: 20px;
-  background-image: url('http://mandw.co/wp-content/uploads/2018/09/unfinished-table-tops-wood-table-top-pictures.jpg');
+  background-image: url('https://i.imgur.com/rI0APBV.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   text-shadow: 2px 2px black;
@@ -330,6 +326,7 @@ label {
 
 .review-container {
   float: left;
+  max-width: 60%;
 }
 
 .review-title {
@@ -343,9 +340,16 @@ label {
 }
 
 .review-button {
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
+  color: red;
+  border: 1px solid black;
   margin-right: 10px;
+}
+
+.review-button:hover {
+  background-color: red;
+  color: white !important;
 }
 
 .first-label {
