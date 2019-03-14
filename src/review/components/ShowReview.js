@@ -30,7 +30,7 @@ class ShowReview extends Component {
     const { alert, user } = this.props
     deleteReview(user, id)
       .then(() => this.setState({ shouldRedirect: true }))
-      .then(() => alert(messages.deleteReviewSuccess, 'danger'))
+      .then(() => alert(messages.deleteReviewSuccess, 'success'))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })

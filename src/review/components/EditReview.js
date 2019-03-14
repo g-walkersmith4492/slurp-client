@@ -117,7 +117,7 @@ class EditReview extends Component {
               className="form-control review-input"
             />
           </div>
-          <button className="btn" type="submit">Save Changes!</button>
+          <button className="btn create-button" type="submit">Save Changes!</button>
         </form>
       </div>
     )

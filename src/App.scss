@@ -113,14 +113,14 @@ $charcoal: #ccc;
 
 .auth-button {
   border-radius: 10px;
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: red;
   border: 1px solid black;
 }
 
 .auth-button:hover {
-  background-color: white;
-  color: red;
+  background-color: red;
+  color: white;
 }
 
 .review-link {
@@ -257,14 +257,15 @@ label {
 }
 
 .create-button {
-  color: #BA2F00;
-  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  color: red;
   border: 1px solid black;
-  font-size: 16px !important;
-  margin: 10px;
-  width: 150px;
-  text-align: center;
-  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.create-button:hover {
+  background-color: red;
+  color: white !important;
 }
 
 .create-button:hover {

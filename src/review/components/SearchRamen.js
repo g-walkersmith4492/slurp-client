@@ -48,7 +48,7 @@ class SearchRamen extends Component {
     searchByRating(this.state.search, user, specs)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(() => {
-        if (!this.state.ramens) {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')
         }
       })
@@ -66,7 +66,7 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(() => {
-        if (!this.state.ramens) {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')
         }
       })
@@ -84,7 +84,7 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(() => {
-        if (!this.state.ramens) {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')
         }
       })
@@ -102,7 +102,7 @@ class SearchRamen extends Component {
     searchByPrice(this.state.search, user, priceNum)
       .then(response => this.setState({ ramens: response.data.businesses, search: '' }))
       .then(() => {
-        if (!this.state.ramens) {
+        if (!this.state.ramens || this.state.ramens.length === 0) {
           alert(messages.searchRamenFailure, 'danger')
         }
       })
@@ -146,12 +146,14 @@ class SearchRamen extends Component {
               placeholder="location"
               onChange={this.handleChange}
             />
-            <button className="btn search-button" type="submit">Best Match</button>
-            <button className="btn search-button search-by-rating-button" onClick={this.onSearchByRating}type="button">Search By Rating</button>
-            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice1} type="button">$</button>
-            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice2} type="button">$$</button>
-            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
-            <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
+            <section className="search-buttons">
+              <button className="btn search-button" type="submit">Best Match</button>
+              <button className="btn search-button search-by-rating-button" onClick={this.onSearchByRating}type="button">Search By Rating</button>
+              <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice1} type="button">$</button>
+              <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice2} type="button">$$</button>
+              <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice3} type="button">$$$</button>
+              <button className="btn search-button search-by-price-button" onClick={this.onSearchByPrice4} type="button">$$$$</button>
+            </section>
           </form>
           <Fragment>
           </Fragment>

@@ -28,7 +28,7 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
   <header className="main-header">
-    <h1 className="slurp-title">SLURP</h1> <img className="slurp-icon" src="http://www.miragoround.works/wp-content/uploads/2017/01/Ramen-with-logo1.gif" alt="ramen-bowls" />
+    <h1 className="slurp-title">SLURP</h1> <img className="slurp-icon" src="https://i.imgur.com/umUh7Bz.gif" alt="ramen-bowls" />
     <nav>
       <section className="username-box">{ user && <span>Welcome, {user.email}</span>}</section>
       { user ? authenticatedOptions : unauthenticatedOptions }
