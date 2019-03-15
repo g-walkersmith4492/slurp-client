@@ -30,6 +30,7 @@ class EditReview extends Component {
       .then(() => this.setState({ shouldRedirect: true }))
       .then(() => alert(messages.editReviewSuccess, 'success'))
       .catch(error => {
+        this.setState({ shouldRedirect: true })
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
         alert(messages.editReviewFailure, 'danger')
