@@ -19,7 +19,7 @@ class ShowReview extends Component {
     const { alert } = this.props
     showReview(this.props.match.params.id)
       .then(response => this.setState({ review: response.data.review }))
-      .then(() => console.log(this.state.review))
+      .then(() => console.log(this.state.review.user.email))
       .catch(error => {
         console.error(error)
         this.setState({ name: '', ramen_type: '', price: '', rating: '', location: '', comments: '' })
@@ -51,11 +51,11 @@ class ShowReview extends Component {
       return <p>loading.... </p>
     }
     if (review.user_id === this.props.user.id) {
-      console.log(this.props.user.id)
       return (
         <div className="review-display">
           <div className="review-container">
             <h2 className="review-title">{review.name}</h2>
+            <h3 className="reviewer-email">{`${this.state.review.user.email}'s`} review:</h3>
             <h4><label>Type:</label>           {review.ramen_type}</h4>
             <h4><label>Price:</label>          {review.price}</h4>
             <h4><label>Rating:</label>         {review.rating}</h4>
@@ -74,6 +74,7 @@ class ShowReview extends Component {
         <div className="review-display">
           <div className="review-container">
             <h2 className="review-title">{review.name}</h2>
+            <h3 className="reviewer-email">{`${this.state.review.user.email}'s`} review:</h3>
             <h4><label>Type:</label>           {review.ramen_type}</h4>
             <h4><label>Price:</label>          {review.price}</h4>
             <h4><label>Rating:</label>         {review.rating}</h4>
