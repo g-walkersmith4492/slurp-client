@@ -65,7 +65,7 @@ class EditReview extends Component {
           <div className="form-group">
             <input
               type="text"
-              name="ramen_type"
+              name="this.state.ramen_type"
               value={this.state.ramen_type}
               placeholder="Type of Ramen"
               onChange={this.handleChange}
